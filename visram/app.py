@@ -174,7 +174,7 @@ class VisramChart(QtWidgets.QGraphicsView):
         # move back down to starting corner, closing path
         path.arcTo(innerRect, theta2, theta1 - theta2)
 
-        brush = QtGui.QBrush(QtGui.QColor(*(c * 255 for c in color)))
+        brush = QtGui.QBrush(QtGui.QColor.fromRgbF(*(color)))
 
         item = ProcessWedge(pid, path)
         item.setPen(QtGui.QPen(QtCore.Qt.NoPen))
